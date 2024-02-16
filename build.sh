@@ -1,4 +1,3 @@
 #! /bin/bash
-yum install openssl-libs
-yum install openssl11
+yum update
 pip install -r requirements.txt
