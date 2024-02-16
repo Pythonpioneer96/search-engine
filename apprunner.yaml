@@ -1,0 +1,20 @@
+version: 1.0
+runtime: python3 
+build:
+  commands:
+    build:        
+      - pip install -r requirements.txt
+  env:
+    - name: DJANGO_SETTINGS_MODULE
+      value: "django_apprunner.settings"
+    - name: MY_VAR_EXAMPLE
+      value: "example"
+run:
+  runtime-version: 3.6
+  command: bash install.sh
+  network: 
+    port: 8080
+    env: MY_APP_PORT  
+  env:
+    - name: MY_VAR_EXAMPLE
+      value: "will"
