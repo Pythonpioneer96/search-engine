@@ -3,4 +3,4 @@
 pip3 install wikipedia
 pip3 install flask
 
-flask run
+flask run --host=0.0.0.0
